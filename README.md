@@ -8,7 +8,7 @@
   
   
 [![Website Badge](https://img.shields.io/badge/Website-000000?style=for-the-badge&logo=google-chrome&logoColor=white)](http://www.rme.000.pe/)
-[![YouTube Badge](https://img.shields.io/badge/-YouTube-e4405f?style=for-the-badge&logo=Youtube&logoColor=white)](https://www.youtube.com/c/?)
+[![YouTube Badge](https://img.shields.io/badge/-YouTube-e4405f?style=for-the-badge&logo=Youtube&logoColor=white)](https://www.youtube.com/ramiya/?)
 [![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-0e76a8?style=for-the-badge&logo=Linkedin&logoColor=white)]([https://www.linkedin.com/in/?/](https://www.linkedin.com/in/ramisha-gimhana-024a23191/))
 [![Twitter Badge](https://img.shields.io/badge/-Twitter-318CD8?style=for-the-badge&logo=Twitter&logoColor=white)](https://twitter.com/?)
 [![StackOverflow Badge](https://img.shields.io/badge/-StackOverflow-f48025?style=for-the-badge&logo=StackOverflow&logoColor=white)](https://stackoverflow.com/users/15619587/rmi99)
