@@ -6,7 +6,7 @@
 [![Twitter Badge](https://img.shields.io/badge/-Twitter-318CD8?style=for-the-badge&logo=Twitter&logoColor=white)](https://twitter.com/?)
 [![StackOverflow Badge](https://img.shields.io/badge/-StackOverflow-f48025?style=for-the-badge&logo=StackOverflow&logoColor=white)](https://stackoverflow.com/users/15619587/rmi99)
 
-[![GitHub Streak](https://streak-stats.demolab.com?user=rmi99&theme=gotham&hide_border=true&mode=weekly&card_width=507)](https://git.io/streak-stats)
+
 <!---
 rMi99/rMi99 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
@@ -35,3 +35,4 @@ You can click the Preview link to take a look at your changes.
 </a>
 
 <!-- Made with [OSS Insight](https://ossinsight.io/) -->
+[![GitHub Streak](https://streak-stats.demolab.com?user=rmi99&theme=gotham&hide_border=true&mode=weekly&card_width=507)](https://git.io/streak-stats)
