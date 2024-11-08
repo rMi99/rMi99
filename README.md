@@ -5,7 +5,7 @@
 [![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-0e76a8?style=for-the-badge&logo=Linkedin&logoColor=white)]([https://www.linkedin.com/in/?/](https://www.linkedin.com/in/ramisha-gimhana-024a23191/))
 [![Twitter Badge](https://img.shields.io/badge/-Twitter-318CD8?style=for-the-badge&logo=Twitter&logoColor=white)](https://twitter.com/?)
 [![StackOverflow Badge](https://img.shields.io/badge/-StackOverflow-f48025?style=for-the-badge&logo=StackOverflow&logoColor=white)](https://stackoverflow.com/users/15619587/rmi99)
-
+[![Medium Badge](https://img.shields.io/badge/-Medium-12100E?style=for-the-badge&logo=Medium&logoColor=white)](https://rmi99.medium.com/)
 
 <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="eb6c4ed8-5f20-4bfc-9bd4-b67089fb5f88" data-share-badge-host="https://www.credly.com"></div>
 
