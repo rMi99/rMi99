@@ -1,4 +1,4 @@
-# <span id="animated-name"></span> 👋
+# Hi there, I'm Ramisha Gimhana! 👋
 
 [![Website Badge](https://img.shields.io/badge/Website-000000?style=for-the-badge&logo=google-chrome&logoColor=white)](http://www.rme.000.pe/)
 [![YouTube Badge](https://img.shields.io/badge/-YouTube-e4405f?style=for-the-badge&logo=Youtube&logoColor=white)](https://www.youtube.com/ramiya/?)
@@ -6,23 +6,6 @@
 [![Twitter Badge](https://img.shields.io/badge/-Twitter-318CD8?style=for-the-badge&logo=Twitter&logoColor=white)](https://twitter.com/?)
 [![StackOverflow Badge](https://img.shields.io/badge/-StackOverflow-f48025?style=for-the-badge&logo=StackOverflow&logoColor=white)](https://stackoverflow.com/users/15619587/rmi99)
 [![Medium Badge](https://img.shields.io/badge/-Medium-12100E?style=for-the-badge&logo=Medium&logoColor=white)](https://rmi99.medium.com/)
-
-<script>
-  const name = "Ramisha Gimhana";
-  const element = document.getElementById("animated-name");
-  let i = 0;
-  
-  function typeWriter() {
-    if (i < name.length) {
-      element.innerHTML += name.charAt(i);
-      i++;
-      setTimeout(typeWriter, 100);
-    }
-  }
-  
-  // Start animation when page loads
-  window.onload = typeWriter;
-</script>
 
 ## 🌍 Public Contributor Rank
 ![GitHub Rank](https://github-readme-stats.vercel.app/api?username=rmi99&show_icons=true&locale=en&rank_icon=github)
