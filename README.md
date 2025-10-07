@@ -6,6 +6,8 @@
 [![Twitter Badge](https://img.shields.io/badge/-Twitter-318CD8?style=for-the-badge&logo=Twitter&logoColor=white)](https://twitter.com/?)
 [![StackOverflow Badge](https://img.shields.io/badge/-StackOverflow-f48025?style=for-the-badge&logo=StackOverflow&logoColor=white)](https://stackoverflow.com/users/15619587/rmi99)
 [![Medium Badge](https://img.shields.io/badge/-Medium-12100E?style=for-the-badge&logo=Medium&logoColor=white)](https://rmi99.medium.com/)
+[![HackTheBox](https://img.shields.io/badge/HackTheBox-YOUR_HTB_USERNAME-brightgreen)](https://www.hackthebox.com/users/profile/YOUR_HTB_USERNAME)
+
 
 ## 🌍 Public Contributor Rank
 ![GitHub Rank](https://github-readme-stats.vercel.app/api?username=rmi99&show_icons=true&locale=en&rank_icon=github)
