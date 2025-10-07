@@ -1,3 +1,5 @@
+"use client"
+import React from 'react'
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 
@@ -39,7 +41,7 @@ const education = [
 
 
   const skillGroups = [
-    { title: 'DevOps & Cloud', items: ['AWS', 'Docker', 'Kubernetes'] },
+    { title: 'DevOps & Cloud', items: ['Terraform', 'AWS', 'Docker', 'Kubernetes', 'Jenkins', 'Grafana', 'New Relic'] },
     { title: 'Programming', items: ['Java', 'Python', 'Go' , "PHP" , "C#" ,"Bash"] },
     { title: 'Frameworks', items: ['React', 'NextJs', 'Node.js', 'Spring', "Laravel" , "Fiber" , ".NET" ] },
     { title: 'ML Tools', items: ['TensorFlow', 'PyTorch', 'Scikit-learn'] },
@@ -87,7 +89,7 @@ const education = [
               {skillGroups.map((group) => (
                 <Card key={group.title} className="glass p-6">
                   <h4 className="font-semibold mb-4 text-primary">{group.title}</h4>
-                  <div className="grid grid-cols-3 gap-4">
+                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-4">
                     {group.items.map((item) => (
                       <SkillIcon key={item} name={item} />
                     ))}
@@ -103,10 +105,111 @@ const education = [
 }
 
 function SkillIcon({ name }: { name: string }) {
+  // map common names to simple-icons slugs
+  const overrides: Record<string, string> = {
+    'c#': 'csharp',
+    'csharp': 'csharp',
+    '.net': 'dotnet',
+    'dotnet': 'dotnet',
+    'nextjs': 'nextdotjs',
+    'next.js': 'nextdotjs',
+    'node.js': 'nodedotjs',
+    'nodejs': 'nodedotjs',
+    'scikit-learn': 'scikitlearn',
+    'tensorflow': 'tensorflow',
+    'pytorch': 'pytorch',
+    'aws': 'amazonaws',
+    'kubernetes': 'kubernetes',
+    'docker': 'docker',
+    'java': 'java',
+    'python': 'python',
+    'go': 'go',
+    'php': 'php',
+    'bash': 'gnubash',
+    'spring': 'spring',
+  'terraform': 'terraform',
+  'jenkins': 'jenkins',
+  'grafana': 'grafana',
+  'new relic': 'newrelic',
+    'laravel': 'laravel',
+    'react': 'react',
+    'next': 'nextdotjs',
+    '.net core': 'dotnet',
+    '.net 6': 'dotnet',
+    '.net 7': 'dotnet',
+  }
+
+  const slugify = (s: string) => {
+    const raw = s.trim().toLowerCase()
+    if (overrides[raw]) return overrides[raw]
+    return raw.replace(/[^a-z0-9]/g, '')
+  }
+
+  const slug = slugify(name)
+  const localUrl = `/icons/${slug}.svg`
+  const cdnUrl = `https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/${slug}.svg`
+
+  const [svgSrc, setSvgSrc] = React.useState<string | null>(null)
+  const [failed, setFailed] = React.useState(false)
+
+  // initials fallback
+  const initials = name
+    .split(/\s|\.|-|_/)
+    .map((p) => p[0])
+    .filter(Boolean)
+    .slice(0, 2)
+    .join('')
+
+  React.useEffect(() => {
+    let mounted = true
+    const storageKey = `si-${slug}`
+
+    // If cached in localStorage, use it (data URL)
+    const cached = typeof window !== 'undefined' ? window.localStorage.getItem(storageKey) : null
+    if (cached) {
+      setSvgSrc(`data:image/svg+xml;utf8,${encodeURIComponent(cached)}`)
+      return
+    }
+
+    // Try fetching local file first
+    fetch(localUrl, { method: 'GET' })
+      .then((res) => {
+        if (!mounted) return
+        if (res.ok) return res.text()
+        // otherwise fetch CDN
+        return fetch(cdnUrl).then((r) => (r.ok ? r.text() : Promise.reject('cdn')))
+      })
+      .then((svgText) => {
+        if (!mounted) return
+        if (svgText) {
+          try {
+            window.localStorage.setItem(storageKey, svgText)
+          } catch (e) {
+            // ignore quota errors
+          }
+          setSvgSrc(`data:image/svg+xml;utf8,${encodeURIComponent(svgText)}`)
+        }
+      })
+      .catch(() => {
+        if (!mounted) return
+        // mark failed so we show initials fallback
+        setFailed(true)
+      })
+
+    return () => {
+      mounted = false
+    }
+  }, [localUrl, cdnUrl, slug])
+
   return (
     <div className="flex flex-col items-center gap-2 p-3 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors">
       <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-        <img src={`/.jpg?height=32&width=32&query=${name}+logo`} alt={name} className="w-8 h-8" />
+        {svgSrc && !failed ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img src={svgSrc} alt={name} className="w-8 h-8 object-contain" />
+        ) : (
+          <div className="w-8 h-8 rounded flex items-center justify-center bg-primary/20 text-[11px] font-semibold">{initials}</div>
+        )}
       </div>
       <span className="text-xs font-medium text-center">{name}</span>
     </div>
