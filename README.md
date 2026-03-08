@@ -15,8 +15,6 @@
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=rmi99&layout=compact)
 
 <div align="center">
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=808080&height=200&section=header&text=rMi99&fontSize=50&fontAlignY=35&animation=fadeIn&fontColor=ffffff" />
-  
   <img src="https://komarev.com/ghpvc/?username=rmi((&style=for-the-badge&color=blueviolet" alt="Profile views"/>
   
   [![GitHub followers](https://img.shields.io/github/followers/rMi99?logo=GitHub&style=for-the-badge)](https://github.com/rMi99)
