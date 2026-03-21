@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #33ff00;
+  --primary: #33ff00;
+  --secondary: #ffb000;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-mono);
+  /* Optional: a subtle text shadow for a terminal glow effect */
+  text-shadow: 0 0 2px rgba(51, 255, 0, 0.3);
+}
+
+/* Custom Selection */
+::selection {
+  background: var(--primary);
+  color: var(--background);
+}
+
+/* Scrollbar styling for terminal feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+  border-left: 1px solid var(--primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #22cc00;
+}
+
+/* Base border style override to be sharp */
+* {
+  border-radius: 0 !important;
+}
+
+/* Disable default shadows */
+* {
+  box-shadow: none !important;
+}
