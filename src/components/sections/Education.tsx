@@ -8,7 +8,7 @@ const EDU = [
     duration: "2024–2025"
   },
   {
-    degree: "NDICT",
+    degree: "NDICT - (National Diploma in Information Communication Technology)",
     institution: "Vocational Training Authority",
     duration: "2020–2021"
   }
