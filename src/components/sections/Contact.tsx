@@ -24,7 +24,7 @@ export const Contact: React.FC = () => {
   return (
     <TerminalCard title="contact" className="h-full">
       <div className="font-mono space-y-4 text-sm">
-        <p className="text-secondary">$ send-message --to=&quot;ramisha@rightmo.lk&quot;</p>
+        <p className="text-secondary">$ send-message --to=&quot;rmigs999@gmail.com&quot;</p>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="flex flex-col gap-1">
